@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+         <!-- Incorporación de Bootstrap -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+
+        <!-- Barra de navegacion -->
+        <nav class= "navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">Encomienda App</a>
+            </div>
+        </nav>
+        <br>
+    </head>
+
+    <body>
+
+        <!-- Contenedor Global -->
+        <div class="container">
+
+            <!-- Titulo -->
+            <div>
+                <h1><em><p class="text-center">Ingrese los Datos Solicitados para Realizar la Consulta :</p></em></h1>
+            </div>
+            <br>
+
+            <!-- Subtitulo Nro.1° -->
+            <div>
+                <h2> Datos del Usuario : </h2>
+            </div>
+            <br>
+
+            <!-- Formulario -->
+            <form method="POST" action="/resultados/" class="container; flex-column">
+                {% csrf_token %}
+
+                <!-- Contenedor Info.Usuario -->
+                <div class="container" style="border: solid; border: radius 5px;">
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-text">Nombre y Apellido</span>
+                        <!-- Nombre de usuario. Obligatorio, entre 3-40 carácteres -->
+                        <input type="text" aria-label="Nombre" id="txt_nombre_usuario" name="txt_nombre_usuario" class="form-control" placeholder="Nombre" >                 
+
+                        <!-- Apellido de usuario. Obligatorio, entre 3-40 carácteres -->
+                        <input type="text" aria-label="Apellido" id="txt_apellido" name="txt_apellido" class="form-control" placeholder="Apellido" minlength="3" maxlength="40"/required>
+                    </div>
+                      <br>
+                    <div class="input-group">
+                        <span class="input-group-text">Formas de contacto</span>
+                        <!-- Correo de usuario. Obligatorio, entre 3-50 carácteres -->
+                        <input type="text" aria-label="Correo" id="txt_correo" name="txt_correo" class="form-control" placeholder="Correo" minlength="3" maxlength="50" /required>
+
+                        <!-- Celular de usuario. Obligatorio 9 carácteres -->
+                        <input type="number" aria-label="Celular" id="txt_celular" name="txt_celular" class="form-control" placeholder="Celular (Ej: 9 8765 4321)"  min="900000000" max="999999999" /required>
+                    </div>
+                      <br>
+                    <div class="input-group">
+                        <span class="input-group-text">Direcciones</span>
+                        <!-- Direccion de usuario. Obligatorio, entre 3-150 carácteres -->
+                        <input type="text" aria-label="Direccion" id="txt_direccion" name="txt_direccion" class="form-control" placeholder="Recidencia Actual" minlength="3" maxlength="150" /required>
+
+                        <!-- Codiga Postal de usuario. Obligatorio 7 carácteres -->
+                        <input type="number" aria-label="Codigo Postal" id="txt_codigo_postal" name="txt_codigo_postal" class="form-control" placeholder="Codigo Postal" min="1000000" max="77777777" /required>
+                    </div>
+                    <br>
+                </div>
+                <br>
+
+                <!-- Subtitulo Nro. 2° -->
+                <div>
+                    <h2> Datos de la Encomienda : </h2>
+                </div>
+                <br>
+
+                <!-- Contenedor Info.Encomienda -->
+                <div class="container" style="border: solid; border: radius 5px;">
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-text">Nombre y Cantidad</span>
+                        <!-- Nombre de Producto. Obligatorio, entre 3-40 carácteres -->
+                        <input type="text" aria-label="Nombre" id="txt_nombre_producto" name="txt_nombre_producto" class="form-control" placeholder="Nombre del Producto" minlength="3" maxlength="40"/required>
+
+                        <!-- Cantidad de Producto. Obligatorio, entre 1-100 carácteres -->
+                        <input type="number" aria-label="Cantidad" id="txt_cantidad" name="txt_cantidad" class="form-control" placeholder="Cantidad" min="1" /required>
+                    </div>
+                      <br>
+                    <div class="input-group">
+                        <span class="input-group-text">Marca y Modelo</span>
+                        <!-- Marca de Producto. Obligatorio, entre 3-40 carácteres -->
+                        <input type="text" aria-label="Marca" id="txt_marca" name="txt_marca" class="form-control" placeholder="Marca del Producto" minlength="3" maxlength="40" /required>
+
+                        <!-- Marca de Producto. Obligatorio, entre 3-40 carácteres -->
+                        <input type="text" aria-label="Modelo" id="txt_modelo" name="txt_modelo" class="form-control" placeholder="Modelo del Producto" minlength="3" maxlength="40" /requierd>
+                    </div>
+                      <br>
+                    <div class="input-group">
+                        <span class="input-group-text">Valor Unitario y Transporte</span>
+
+                        <!-- Marca de Producto. Obligatorio -->
+                        <input type="number" aria-label="Valor Transporte" id="txt_valor_transporte" name="txt_valor_transporte" class="form-control" placeholder="Valor Transporte Estimado" /required>
+
+                        <!-- Marca de Producto. Obligatorio -->
+                        <input type="number" aria-label="Valor Unitario" id="txt_valor_unitario" name="txt_valor_unitario" class="form-control" placeholder="Valor Unitario del Producto" /required>
+                    </div>
+                      <br>
+                </div>
+                <br>
+                <button id="btn-envio" type="submit" style="margin-left: 20px;" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <br>
+
+    </body>
+</html>
+
+
+
+
