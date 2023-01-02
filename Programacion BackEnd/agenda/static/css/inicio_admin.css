@@ -1,0 +1,18 @@
+#cnt_datos_editar{
+  font-family: 'Alexandria', sans-serif;
+  margin-top: 3%;
+  padding: 40px;
+  width: 50%;
+  box-shadow: 2px 2px 7px black;
+  background-color: #a00404;
+}
+
+#cnt_form_modificar_pregunta{
+font-family: 'Alexandria', sans-serif;
+margin-top: 3%;
+padding: 40px;
+width: 70%;
+box-shadow: 2px 2px 7px black;
+background-color: #a00404;
+
+}

@@ -1,0 +1,12 @@
+#cnt_form_agregar_pregunta{
+    font-family: 'Alexandria', sans-serif;
+    margin-top: 9%;
+    padding: 40px;
+    width: 50%;
+    box-shadow: 2px 2px 7px black;
+    background-color: #a00404;
+}
+body{
+    background-color: #f4f4f4;
+    
+}

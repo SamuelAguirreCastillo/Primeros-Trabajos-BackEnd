@@ -1,0 +1,47 @@
+#cnt_datos_editar{
+    font-family: 'Alexandria', sans-serif;
+    margin-top: 3%;
+    padding: 40px;
+    width: 50%;
+    box-shadow: 2px 2px 7px black;
+    background-color: #a00404;
+}
+
+#cnt_form_modificar_pregunta{
+font-family: 'Alexandria', sans-serif;
+margin-top: 3%;
+padding: 40px;
+width: 50%;
+box-shadow: 2px 2px 7px black;
+background-color: #a00404;
+
+}
+body{
+background-color: #f4f4f4;
+
+}
+.cnt_btn{
+margin: 3px;    
+}
+
+#carouselExampleCaptions{
+    height: 70%;
+    width: 70%;
+    margin-left: 170px;
+    padding-top: 20px;
+}
+#estudiante_media{
+    width: 80%;
+    margin-left: 10%;
+    
+}
+#colegas_inacap{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#mecanica{
+    width: 80%;
+    margin-left: 10%; 
+}
+

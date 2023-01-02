@@ -1,0 +1,18 @@
+#cnt_datos{
+    font-family: 'Alexandria', sans-serif;
+    margin-top: 40px;
+    padding: 40px;
+    width: 50%;
+    box-shadow: 2px 2px 7px black;
+    background-color: #f4f4f4;
+}
+body{
+    background-color: #f4f4f4;
+    
+}
+.cnt_datos_personales{
+    background-color: #a00404;
+    box-shadow: 2px 2px 7px black ;
+    align-content: center;
+    margin-bottom: 100px;
+}

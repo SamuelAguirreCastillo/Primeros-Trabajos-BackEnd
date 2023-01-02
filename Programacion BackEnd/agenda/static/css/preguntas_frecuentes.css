@@ -1,0 +1,22 @@
+section{
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+summary{
+    background-color: #a00404;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+p{
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
