@@ -1,0 +1,56 @@
+#body{
+    
+    background-image: url(/static/img/kustman-logo-787x787.png), url(/static/img/burbujas.png);
+    background-repeat: no-repeat, repeat;
+    background-size: 50%, cover;
+    background-position-x: 50%;
+    background-position-y: -160%;
+   
+    
+}
+
+#cnt_imagen{
+    background-color: coral;
+    height: auto;
+    width: auto;
+    border-radius: 25px;
+    margin-right: 5%;
+    margin-top: 310px;
+    
+    
+}
+#imagen{
+    background-image: url(/static/img/meceros_kunstman_550x367.png);
+    height: 300px;
+    width: 500px;
+    border-radius: 30px;
+    margin: 20px 20px 20px 20px;
+    -webkit-box-shadow: 8px 5px 4px 5px rgba(0,0,0,0.82); 
+    box-shadow: 8px 5px 4px 5px rgba(0,0,0,0.82);
+}
+
+#cnt_opciones{
+
+    background-color: coral;
+    height: auto;
+    width: auto;
+    border-radius: 25px;
+    margin-top: 310px;
+    padding-top: 80px;
+}
+
+#lista{
+    width: 170px;
+    margin-left: 35%;
+}
+#p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
