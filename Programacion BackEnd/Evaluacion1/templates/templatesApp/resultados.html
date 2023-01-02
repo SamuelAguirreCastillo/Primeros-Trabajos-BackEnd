@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <!-- Incorporación de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+        <meta charset="UTF-8">  
+        <title>Resultados</title>
+
+        <!-- Barra de navegacion -->
+        <nav class= "navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand">Encomienda App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/formulario/">Formulario</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <br>
+    </head>
+
+    <body>
+        <link rel="stylesheet" src="{% static 'css/diseño.css' %}">
+
+        <!-- Contenedor Golbal -->
+        <div>
+            <br>
+
+            <!-- Titulo -->
+            <div>
+                <h1><em><p class="text-center">A continuación se le Presentara un Resumen de la Encomienda :</p></em></h1>
+            </div>
+            <br>
+
+            <!-- Tabla con Resumen de Encomienda 1 -->
+            <div class="container" style="border: solid; border: radius 5px;">
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Valor Unitario</th>
+                                <th scope="col">Valor Inicial</th>
+                                <th scope="col">Valor Transporte</th>
+                            </tr>
+                        </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{nombre_producto}}</td>
+                            <td>{{marca}}</td>
+                            <td>{{modelo}}</td>
+                            <td>{{valor_unitario}}</td>
+                            <td>{{valor_inicial}}</td>
+                            <td>{{valor_transporte}}</td>
+                        </tr>                    
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabla con Resumen de Encomienda 2 -->
+            <div class="container" style="border-left: solid; border: radius 5px; border-right: solid; border: radius 5px; border-bottom: solid; border: radius 5px;">
+                <table class="table">
+                    <thead>
+                        <tr>     
+                            <th scope="col">#</th>  
+                            <th scope="col">Valor CIF</th>
+                            <th scope="col">IVA</th>
+                            <th scope="col">Impuesto Aduanero</th>
+                            <th scope="col">Valor Total CLP*</th>
+                            <th scope="col">Valor Total USD*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>{{valor_cif}}</td>
+                            <td>{{valor_iva}}</td>
+                            <td>{{valor_aduanero}}</td>
+                            <td>{{valor_total}}</td>
+                            <td>{{valor_total_usd}}</td>                         
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Ayudas Visuales -->
+            <div style="margin-left: 80px;">
+                <div>
+                    <h8>*Valor total = (CIF + IVA + Aduanero) </h8> <h8>*Dolar = $ 890 CLP</h8>
+                </div>               
+            </div>
+            <br>
+            <!-- Validacion del Usuario -->
+            <div class="container">
+                <br>
+
+                <div class="container text-center">
+                    <div class="row align-items-start" style="border: solid; border: radius 5px;">
+                        
+                        <div class="col" >
+                            <br>
+                            <h5>
+                                {{nombre_usuario}} {{apellido}}, <br> ¿Estos son sus Direcciones? : <br>
+                                Dirección: {{direccion}} - <br> Codigo Postal: {{codigo_postal}}
+                            </h5>
+                            <br>
+                            <!-- Checkbox Direcciones -->
+                            <div class="form-check; flex-column">
+                                <input class="form-check-input"  type="checkbox" value="" id="flexCheckIndeterminate">
+                                <label class="form-check-label" for="flexCheckIndeterminate">
+                                Corresponde
+                                </label>
+                            </div>
+                            <br>
+                        </div>
+                        
+
+                        <div class="col">
+                            <br>
+                            <h5>
+                                {{nombre_usuario}} {{apellido}}, <br> ¿Estos son sus contactos? : <br>
+                                Celular: {{celular}} - <br> Correo: {{correo}}
+                            </h5>
+                            <br>
+                            <!-- Checkbox Contactos -->
+                            <div class="form-check; flex-column">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                <label class="form-check-label" for="flexCheckIndeterminate">
+                                Corresponde
+                                </label>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div>
+
+                <div class="container text-center">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <p style="text-align: center; "><img src="{% static 'img/container.jpg' %}" alt="image" style="width:545px;height:280px;"></p>
+                      </div>
+                      <div class="col">
+                        <p style="text-align: center; "><img src="{% static 'img/manos.jpg' %}" alt="image" style="width:545px;height:280px;"></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    
+    </body>
+</html>
