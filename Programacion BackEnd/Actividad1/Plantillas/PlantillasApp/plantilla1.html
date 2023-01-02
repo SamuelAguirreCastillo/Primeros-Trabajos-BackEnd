@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <title>Plantilla 1</title>
+        <h1><u><p class="text-center">Esta es la Tabla de Multiplicar del Numero {{numero}}:</p></u></h1>
+        <br>
+
+    </head>
+    <body>
+
+
+        <div class="row">
+            
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item"><h2>{{numero}} x 0 = {{tabla0}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 1 = {{tabla1}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 2 = {{tabla2}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 3 = {{tabla3}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 4 = {{tabla4}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 5 = {{tabla5}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 6 = {{tabla6}}</h2></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item"><h2>{{numero}} x 7 = {{tabla7}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 8 = {{tabla8}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 9 = {{tabla9}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 10 = {{tabla10}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 11 = {{tabla11}}</h2></li>
+                    <li class="list-group-item"><h2>{{numero}} x 12 = {{tabla12}}</h2></li>
+                </ul>
+            </div>
+           
+            <br>
+            <img src="{% static 'img/formulas.jpg' %}" alt="image" style="width:600px;height:600px;">
+            
+        </div>
+    </body>
+</html>
